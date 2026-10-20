@@ -1,45 +1,46 @@
 # DeutschZiel
 
-DeutschZiel is a modern web platform for students who want to study in Germany and need professional guidance throughout the German student visa application process.
+DeutschZiel is a modern web platform that helps students who want to study in Germany prepare their German student visa application with professional guidance.
 
-The platform focuses exclusively on education-related German national visas, providing students with application preparation, document review, personalized guidance, and consulting services.
+It focuses exclusively on education-related German national visas and offers application preparation, document review, personal guidance, and consulting.
+
+Website: https://deutsch-ziel.com (in Turkish, for students in Turkey)
 
 ## Overview
 
-DeutschZiel helps students navigate the German student visa process through a structured online consulting experience.
+DeutschZiel makes the student visa preparation process clearer, more organized, and easier to manage, both for the student and for the consultant.
 
-The platform combines:
+The platform brings together:
 
-- A professional public-facing website
-- Service and package presentation
-- Student pre-application form
-- Supabase-powered backend
-- Admin dashboard
-- Secure application and document management
-- Online payment integration with PayTR
-- Email notifications
+- A professional public website
+- Service and package information
+- A pre-application form for students
+- An admin dashboard for the consultant
+- Payment by bank transfer (IBAN)
+- Email notifications for new applications
 - WhatsApp and Google Meet communication
-- Responsive desktop and mobile experience
-
-The goal is to make the visa preparation process clearer, more organized, and easier to manage for both students and the consultant.
+- Search engine optimization and privacy-friendly analytics
+- A responsive design for desktop and mobile
 
 ## What We Do
 
-DeutschZiel provides consulting and application preparation support for students pursuing education in Germany.
-
-Main areas include:
+DeutschZiel supports students who want to study in Germany with:
 
 - German university student visas
 - Language course + university routes
 - Studienkolleg and preparatory education routes
 - Student visa application preparation
 - Document and application file review
-- Application form guidance
-- Motivation letter feedback
-- Financing document review
-- Final application file checks
+- Guidance on the application forms
+- Support with the motivation letter and CV, based on the student's own information
+- Review of financing documents
+- A final check of the complete application file
 
-DeutschZiel does not submit visa applications on behalf of applicants. The applicant remains responsible for submitting their own application.
+DeutschZiel does not submit visa applications on behalf of students. The student submits the official application from their own account and with their own approval. DeutschZiel does not guarantee any visa result; the decision belongs to the German authorities.
+
+### What We Do Not Offer
+
+DeutschZiel does not provide consulting for work visas, the Chancenkarte, tourist visas, family reunification, asylum, residence permit extensions, or other immigration categories.
 
 ## Website Features
 
@@ -47,221 +48,174 @@ DeutschZiel does not submit visa applications on behalf of applicants. The appli
 
 The website includes:
 
-- Landing page
-- Services page
-- Consulting packages
+- Home page
+- Services page, with a detail page for each of the three services (document check, application support, full student visa support)
+- Consulting packages with prices
 - How It Works page
 - About page
-- FAQ
+- Frequently asked questions
 - Contact page
 - Consultation application form
-- Legal and privacy pages
+- Legal and privacy pages (privacy notice, privacy policy, distance service contract, pre-information form, cancellation and refund policy, legal notice)
 
-The design is built around the concept of a path toward a goal, reflecting the meaning of the brand name "DeutschZiel".
+Every page has its own title and description, a sitemap helps search engines, and private areas are kept out of search results.
+
+The design is built around the idea of a path toward a goal, which is what the name "DeutschZiel" (German for "German goal") stands for.
 
 ### Consultation Application
 
-Potential clients can submit their situation through a structured application form.
+A student describes their situation through a short, step-by-step application form. It asks about:
 
-The form collects information such as:
-
-- Personal information
-- Contact details
+- Personal and contact details
 - Current education
-- Target university
-- Intended degree/program
-- Visa route
-- German language level
-- Admission status
-- Financing method
-- Planned start date
-- Current application stage
-- Requested support
+- Target university and program in Germany
+- Planned start date and admission status
+- Visa route and current stage of the application
+- Previous visa applications or refusals
+- German language level and certificates
+- How the studies will be financed
+- Which documents the student already has
+- What kind of support they need
 
-Applications are stored securely in the backend and can be reviewed through the admin dashboard.
+The form is checked both in the browser and on the server. It includes spam protection, limits on repeated submissions, and protection against sending the same application twice. The student must agree to the privacy notice and service terms before sending, and the time of this agreement is saved.
+
+Applications are stored in the database and reviewed by the consultant in the admin dashboard.
 
 ### Admin Dashboard
 
-The admin panel provides a central place to manage incoming applications.
+The admin dashboard is a private area used only by the consultant. It lets the consultant:
 
-It allows the consultant to:
+- See an overview of new, pending, active, and completed cases
+- Search and filter all applications
+- Read everything a student submitted
+- Move an application through the consulting process
+- Write private notes that are never visible to students
+- Choose a package and create a payment record
+- Mark a payment as paid, cancelled, or refunded
+- Contact a student with one click through WhatsApp or email
 
-- View applications
-- Review applicant information
-- Track application status
-- Manage client information
-- Review submitted documents
-- Manage the consulting workflow
-- Access relevant application information
+Documents are currently exchanged with students through WhatsApp.
 
 ### Payment
 
-The platform uses PayTR for online payments.
+Payments are made by bank transfer (IBAN). The process is:
 
-The payment system provides a secure checkout experience and integrates the payment process into the consulting workflow.
+1. After reviewing an application, the consultant contacts the student and agrees on a package.
+2. The consultant creates a payment record for that package in the admin dashboard and shares the bank details with the student directly.
+3. Once the transfer is confirmed, the consultant marks the payment as paid, and the case moves on to the consulting phase.
+
+Card payment through an online provider was prepared but is not in use, because the provider applications were not approved. The code for it is still part of the project and can be reactivated if an approved provider becomes available.
 
 ### Notifications
 
-The system supports notifications for important events such as new consultation applications.
+The consultant receives an email whenever a new consultation application arrives. The email contains only basic contact and route information, not the full application.
 
-Users receive appropriate:
+### Everyday User Experience
 
-- Loading states
-- Success states
-- Error messages
-- Form validation feedback
+Visitors always see clear loading indicators, success messages, helpful error messages, and form validation feedback.
 
 ### Responsive Design
 
-DeutschZiel is designed for:
-
-- Desktop
-- Laptop
-- Tablet
-- Mobile
-
-The mobile experience includes simplified navigation and quick-access actions such as WhatsApp and consultation requests.
+DeutschZiel works on desktop, laptop, tablet, and mobile devices. On phones, navigation is simplified into a menu, and WhatsApp and consultation request buttons are easy to reach.
 
 ## Tech Stack
 
-### Frontend
+The platform is built with widely used, modern tools:
 
-- React
-- Next.js
-- TypeScript
-- Tailwind CSS
-- shadcn/ui
-- Framer Motion
-
-### Backend & Database
-
-- Supabase
-- PostgreSQL
-- Supabase Auth
-- Supabase Storage
-- Server-side validation
-
-Next.js handles the application layer while Supabase provides database, authentication, storage, and backend infrastructure.
-
-### Payments
-
-- PayTR
-
-### Communication
-
-- WhatsApp
-- Google Meet
-- Email
-
-### Development
-
-- Git
-- GitHub
-- VS Code
+- **Next.js, React, and TypeScript:** the website and its server-side logic
+- **Tailwind CSS and shadcn/ui:** the look and feel of the interface
+- **Supabase (PostgreSQL):** the database, plus the protected administrator login
+- **Resend:** email notifications
+- **Cloudflare:** hosting and the domain
+- **Google Analytics:** optional visitor statistics, only used with the visitor's consent
+- **GitHub:** source code storage and automatic publishing of every update
 
 ## Architecture
 
-The application follows a modern full-stack architecture where Next.js handles the frontend and application layer while Supabase provides the backend infrastructure.
+The website and the application logic run together in one Next.js application. Supabase provides the database and the login for the administrator. All access to stored data goes through the server, never directly from the visitor's browser.
 
-The main flow is:
+How a visitor becomes a client:
 
-Visitor → DeutschZiel Website → Consultation Form → Supabase → Admin Dashboard
+Visitor → Website → Consultation Form → Database → Admin Dashboard
 
-For customers who proceed with a service:
+How a client starts a service:
 
-Customer → Service Selection → PayTR → Payment Confirmation → Consulting Workflow
+Client → Consultant Review and Contact → Package Confirmed → Bank Transfer → Payment Confirmed in Admin → Consulting
 
 ## Security
 
-Security is an important part of DeutschZiel because the platform handles personal information and documents related to visa applications.
+Security matters because the platform handles personal information related to visa applications. In plain terms, the project includes:
 
-The application includes:
-
-- Server-side input validation
-- Protected admin routes and functionality
-- Supabase Row Level Security
-- Controlled database access
-- Secure environment variables
-- Protected server-side operations
-- Secure document storage
-- Authentication and authorization
-- Input sanitization and validation
-- Spam protection
-- Rate limiting
-- Production error handling
-- Restricted access to sensitive application data
-
-Sensitive credentials, API keys, and service secrets are stored in environment variables and are never exposed to the client-side application.
-
-Database access is controlled through Supabase security policies so that users and administrators can only access data they are authorized to access.
+- Checking every form on the server, not only in the browser
+- A database where nothing is publicly readable; all access goes through the server
+- A protected administrator login, with public sign-ups disabled and every admin page and action checking the administrator's identity
+- Spam protection and limits on repeated attempts for the application form and the admin login
+- Secret keys and passwords kept outside the code and never exposed to visitors
+- Protective browser settings that reduce the risk of malicious scripts and unwanted embedding
+- Analytics and cookies that only work with the visitor's explicit consent
+- Error messages that never reveal technical details
+- Private consultant notes that are never shown to students
 
 ## Design
 
-The visual identity is based on a simple concept:
+The visual identity is based on a simple idea:
 
 Start → Path → Goal
 
 The interface uses:
 
-- Minimal layouts
-- Strong typography
-- Dark navy and charcoal tones
-- Germany-inspired red and gold accents
+- A light, easy-to-read page with a dark navy hero section and footer
+- Germany-inspired black, red, and gold accents, including thin flag-colored stripes
+- A softly moving, abstract flag background in the hero section, deliberately stylized rather than a literal flag
+- Elegant serif headings
 - Clean cards and sections
 - Subtle animations
 - Clear calls to action
-- Consistent spacing and responsive layouts
+- Consistent spacing and a layout that adapts to every screen size
 
-The design intentionally avoids generic visa-agency visuals such as passports, airplanes, excessive German flags, and official-looking government imagery.
+The design intentionally avoids generic visa-agency imagery such as passports, airplanes, and official-looking government visuals.
 
 ## Customer Journey
 
-The platform is designed around a simple customer journey:
+Discovery → Website → Consultation Application → Application Review → Client Contact → Package Selection → Payment → Consulting → Document & Application Preparation
 
-Discovery → Website → Consultation Application → Application Review → Client Contact → Service Selection → Payment → Consulting → Document & Application Preparation
-
-The initial application allows DeutschZiel to understand the student's situation before the consulting service begins.
+The application form lets the consultant understand a student's situation before the service begins. The first 15-minute consultation is free.
 
 ## Business Model
 
-DeutschZiel is a bootstrapped online consulting business focused on German education and student visa preparation.
-
-The platform allows the business to manage customer acquisition, consultation requests, payments, and application-related workflows through a single web platform.
+DeutschZiel is a bootstrapped online consulting business focused on German education and student visa preparation. The platform manages customer acquisition, consultation requests, payments, and application-related work in one place, with very low running costs.
 
 ## Scalability
 
-The architecture is designed so that additional functionality can be introduced without rebuilding the entire application.
+The project is built so that new features can be added without starting over. Possible next steps:
 
-Potential future capabilities include:
-
-- Client accounts
-- Dedicated client dashboards
-- Secure document upload portals
+- A sticky WhatsApp and consultation button bar on mobile
+- A contact form with an inbox in the admin dashboard
+- Online card payment, if an approved provider becomes available
+- Secure document upload for clients
+- Client accounts and personal dashboards
 - Application progress tracking
-- Automated document checklists
-- Automated reminders
-- OCR-based document processing
-- AI-assisted document analysis
-- CRM functionality
-- Advanced workflow automation
-- Customer communication history
+- Automatic document checklists and reminders
+- Document recognition and AI-assisted document analysis
+- Customer relationship management features
 - Automated email workflows
 
 ## Project Status
 
-DeutschZiel is being developed as a production-ready commercial web platform.
+DeutschZiel is live and developed as a production-ready commercial platform.
 
-The project focuses on:
+Working today:
 
-- Professional user experience
-- Secure data handling
-- Responsive design
-- Simple customer workflows
-- Reliable backend infrastructure
-- Online payments
-- Administrative management
-- Scalable architecture
-- Low infrastructure overhead
+- Public website, application form, and admin dashboard
+- Payment records and payments by bank transfer
+- Email notifications for new applications
+- Search engine optimization, consent-based analytics, and security measures
+
+Next:
+
+- Making payment confirmation and agreement approval more automatic
+- Secure document upload
+- Mobile quick-action bar
 
 ## License
 
